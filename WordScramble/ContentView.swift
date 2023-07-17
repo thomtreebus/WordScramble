@@ -34,7 +34,7 @@ struct ContentView: View {
             }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
-            .onAppear(perform: startGame)
+            .onAppear(perform: startGame) // runs closure when the view is shown
             .alert(errorTitle, isPresented: $showError) {
                 Button("OK", role: .cancel) {}
             } message: {
