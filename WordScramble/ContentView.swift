@@ -33,6 +33,9 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(rootWord)
+            .toolbar {
+                Button("Restart", action: startGame)
+            }
             .onSubmit(addNewWord)
             .onAppear(perform: startGame) // runs closure when the view is shown
             .alert(errorTitle, isPresented: $showError) {
